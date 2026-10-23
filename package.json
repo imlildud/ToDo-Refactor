@@ -1,0 +1,12 @@
+{
+  "name": "todo-refactor-starter",
+  "version": "1.0.0",
+  "description": "ToDo Refactor Lab, refactorizacion y pruebas unitarias con Vitest",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.8"
+  }
+}
