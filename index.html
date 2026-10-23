@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo Refactor Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="contenedor">
+
+    <header class="encabezado">
+      <h1>Mis tareas</h1>
+      <p id="resumen" class="resumen"></p>
+    </header>
+
+    <form id="form-tarea" class="barra">
+      <input id="input-titulo" type="text" placeholder="¿Qué tienes que hacer?" autocomplete="off">
+      <button type="submit" class="btn-agregar">Agregar</button>
+    </form>
+    <p id="mensaje" class="mensaje" role="alert"></p>
+
+    <div class="barra">
+      <input id="input-busqueda" type="text" placeholder="Buscar tarea" autocomplete="off">
+      <select id="filtro">
+        <option value="todas">Todas</option>
+        <option value="pendientes">Pendientes</option>
+        <option value="terminadas">Terminadas</option>
+      </select>
+    </div>
+
+    <section id="seccion-pendientes">
+      <h2>Pendientes <span id="contador-pendientes" class="contador"></span></h2>
+      <div id="grid-pendientes" class="grid"></div>
+    </section>
+
+    <section id="seccion-terminadas">
+      <h2>Terminadas <span id="contador-terminadas" class="contador"></span></h2>
+      <div id="grid-terminadas" class="grid"></div>
+    </section>
+
+  </main>
+
+  <!-- scripts normales para que la pagina abra con doble clic -->
+  <script src="src/taskService.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
